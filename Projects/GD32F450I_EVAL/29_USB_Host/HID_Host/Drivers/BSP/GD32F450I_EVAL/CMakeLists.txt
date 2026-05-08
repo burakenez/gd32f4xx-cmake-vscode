@@ -1,0 +1,10 @@
+project(GD32F450I_EVAL LANGUAGES C CXX ASM)
+
+add_library(GD32F450I_EVAL INTERFACE)
+
+target_include_directories(GD32F450I_EVAL INTERFACE
+    ${DRIVERS_DIR}/BSP/GD32F450I_EVAL
+    ${DRIVERS_DIR}/BSP/GD32F450I_EVAL/LCD_Common
+    )
+
+target_link_libraries(GD32F450I_EVAL INTERFACE GD32F4xx_standard_peripheral)
